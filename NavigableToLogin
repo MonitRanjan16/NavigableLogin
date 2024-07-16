@@ -1,0 +1,26 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class NavigateToLoginPage {
+    public static void main(String[] args) {
+        // Set the path to the ChromeDriver executable (adjust this based on your system)
+        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+
+        // Initialize the WebDriver instance
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to the login page
+        driver.get("https://juice-shop.herokuapp.com/#/login");
+
+        // Optional: Add a delay to wait for the page to load (adjust as needed)
+        // For demonstration purposes, adding a sleep for 3 seconds
+        try {
+            Thread.sleep(3000); // 3 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Close the browser session
+        driver.quit();
+    }
+}
